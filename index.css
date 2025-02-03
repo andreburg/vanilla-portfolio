@@ -42,9 +42,10 @@ body {
 }
 
 main {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   gap: var(--gap-lg);
 }
 
@@ -275,4 +276,22 @@ footer {
   padding: var(--gap-sm);
   background-color: hsl(var(--muted));
   border-radius: var(--rounded-sm);
+}
+
+#weather {
+  display: flex;
+  gap: var(--gap-sm);
+  right: 0;
+  background-color: hsl(var(--muted));
+  padding: 0.5rem 1rem;
+  border-radius: var(--rounded-sm);
+}
+
+.location {
+  display: flex;
+  gap: var(--gap-sm);
+}
+
+[aria-hidden="true"] {
+  display: none !important;
 }
