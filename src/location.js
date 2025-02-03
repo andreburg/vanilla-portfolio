@@ -1,3 +1,5 @@
+import { cities } from "../data/cities.js";
+
 /**
  * @typedef {Object} Coordinate
  * @property {Number} latitude
@@ -18,8 +20,6 @@ export const getCoordinates = async () => {
 };
 
 export async function getUserCity(coords) {
-  const citiesResponse = await fetch("./data/cities.json");
-  const cities = await citiesResponse.json();
   const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const citiesInTimeZone = cities.filter(
     (city) => city.timezone == userTimezone
