@@ -18,7 +18,7 @@ export const getCoordinates = async () => {
 };
 
 export async function getUserCity(coords) {
-  const citiesResponse = await fetch("/data/cities.json");
+  const citiesResponse = await fetch("./data/cities.json");
   const cities = await citiesResponse.json();
   const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const citiesInTimeZone = cities.filter(
